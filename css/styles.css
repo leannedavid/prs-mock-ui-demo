@@ -1,0 +1,31 @@
+.art-depts, .business-depts, .edu-depts, .ecst-depts, .health-depts,
+  .science-depts, .interdisciplinary-depts{
+    padding-left: 15px;
+}
+
+h2, h3, h4{
+  color: #003237;
+  padding-left: 8px;
+}
+
+.search-filter{
+  padding-right: 15px;
+  float:right;
+}
+
+.upload-file{
+  padding: 10px;
+}
+
+.table-responsive{
+  padding:50px;
+}
+
+th{
+  text-align: center;
+
+}
+
+.col-sm-6{
+  padding: 8px;
+}
