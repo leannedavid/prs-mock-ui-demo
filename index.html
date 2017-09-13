@@ -4,13 +4,26 @@
 	<meta charset="UTF-8">
 	<title>PRS Review System</title>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
+	<!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+  <script src="js/ui-bootstrap-tpls-0.9.0.min.js"></script> -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+	<!-- <link rel="stylesheet" href="js/ui-bootstrap-tpls-2.5.0.min.js"> -->
+
+
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-resource.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.js"></script>
+
+
 
     <script src="js/app.js"></script>
 		<script src="js/ctrl.js"></script>
@@ -18,34 +31,62 @@
 
 </head>
 <body ng-app="webdevapp" ng-controller="MyWebDevController">
-		<nav class="navbar navbar-inverse navbar-toggleable-md">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">PRS Review</a>
-			</div>
 
-			<ul class="nav navbar-nav">
-			     <li><a href="/">Home</a></li>
+	<nav class="navbar navbar-default">
+			<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
 
-           <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                  Departments
-                <span class="caret"></span></a>
+						<a class="navbar-brand" href="#">Program Review System</a>
+					</div>
 
-                <ul class="dropdown-menu">
-                  <li><a href="#">College of Arts and Letters</a></li>
-                  <li><a href="#">College of Business and Economics</a></li>
-                  <li><a href="#">Charter College of Education</a></li>
-                  <li><a href="#">College of Engineering, Computer Science, and Technology</a></li>
-                  <li><a href="#">College of Health and Human Services</a></li>
-                  <li><a href="#">College of Natural and Social Sciences</a></li>
-                </ul>
-           </li>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a href="#">Home</a></li>
 
-        <li><a href="/documents">Documents</a></li>
-        <li><a href="/calendar">Calendar</a></li>
-        <li><a href="/contact">Contacts</a></li>
-			</ul>
-		</nav>
+							<!-- Departments Dropdown-->
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Departments <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">College of Arts and Letters</a></li>
+									<li><a href="#">College of Business and Economics</a></li>
+									<li><a href="#">Charter College of Education</a></li>
+									<li><a href="#">College of Engineering, Computer Science, and Technology</a></li>
+									<li><a href="#">College of Health and Human Services</a></li>
+									<li><a href="#">College of Natural and Social Sciences</a></li>
+								</ul>
+							</li>
+
+							<li><a href="#">Document Templates</a></li>
+							<li><a href="#">Calendar</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+
+						<ul class="nav navbar-nav navbar-right">
+							<a class="navbar-brand" href="#">
+    							<img src="/photos/test2.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+  						</a>
+
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Request Access</a></li>
+									<li role="separator" class="divider">Control</li>
+									<li><a href="#">Settings</a></li>
+									<li><a href="#">Sign Out</a></li>
+								</ul>
+							</li>
+						</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+</nav>
+
 
 	<div ng-view></div>
 

@@ -16,5 +16,4 @@ webdevapp.controller('MyWebDevController', ['$scope', function($scope){
     'status': 'Approved'
   }]
 
-
 }])

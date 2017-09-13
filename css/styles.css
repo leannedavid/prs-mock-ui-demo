@@ -29,3 +29,20 @@ th{
 .col-sm-6{
   padding: 8px;
 }
+
+/*.navbar-brand{
+  padding: 50px;
+  float: none;
+  margin: 0;
+}*/
+
+why{
+  margin: 0;
+  padding: 50px;
+  float: none;
+}
+/*
+thead{
+  background: #000410;
+  color: #FFFFFF;
+}*/
