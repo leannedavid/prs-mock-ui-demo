@@ -1,0 +1,56 @@
+<div class="container-fluid">
+  <div class="col-sm-8 col-sm-offset-2">
+  <div class="upload-file">
+    <form action="Upload" method="post" enctype="multipart/form-data">
+      Upload file: <input type="file" class="form-control-file" name="file"/> <br />
+      <!-- <input type="submit" name="upload" value="Upload" /> -->
+    </form>
+  </div>
+
+  <!-- <div class="dz-preview dz-file-preview">
+  <div class="dz-details">
+    <div class="dz-filename"><span data-dz-name></span></div>
+    <div class="dz-size" data-dz-size></div>
+    <img data-dz-thumbnail />
+  </div>
+  <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
+  <div class="dz-success-mark"><span>✔</span></div>
+  <div class="dz-error-mark"><span>✘</span></div>
+  <div class="dz-error-message"><span data-dz-errormessage></span></div>
+</div> -->
+
+<div>
+    <div class="dropzone" options="dzOptions" file="file" file-name="fileName" callbacks="dzCallbacks" ng-dropzone></div> <br/>
+</div>
+
+File name is: {{fileName}}
+
+    <form class="form-group">
+        <div class="form-group">
+              <label>Title: </label>
+              <input type="text" class="form-control" size="50" placeholder=" Name of document"/>
+
+      </div>
+
+
+
+        <div class="form-group">
+              <label>Status: </label>
+              <select class="form-control">
+                <option>New</option>
+                <option>Pending</option>
+                <option>In Progress</optionn>
+                <option>Needs Approval</option>
+                <option>On Hold</option>
+                <option>Approved</option>
+              </select>
+            </div>
+
+        <div class="form-group">
+            <label>Comments:</label>
+            <textarea class="form-control" rows="5" placeholder="Insert any comments"></textarea>
+        </div>
+
+          <a class="btn btn-primary" id="uploadButton" name="upload" value="Upload">Upload</a>
+          </form>
+  </div></div>

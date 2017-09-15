@@ -41,6 +41,12 @@ why{
   padding: 50px;
   float: none;
 }
+
+
+.dropzone{
+  text-align: center;
+
+}
 /*
 thead{
   background: #000410;

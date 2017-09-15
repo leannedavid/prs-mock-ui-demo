@@ -4,9 +4,9 @@
   "description": "angular practice",
   "main": "index.js",
   "dependencies": {
-    "angular-ui-bootstrap": "^2.5.0",
     "lite": "^4.0.5",
-    "lite-server": "^2.3.0"
+    "lite-server": "^2.3.0",
+    "ngdropzone": "^2.0.2"
   },
   "devDependencies": {},
   "scripts": {

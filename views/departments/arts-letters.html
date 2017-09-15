@@ -4,14 +4,9 @@
       <button type="button" class="btn btn-primary btn-sm">Search</button>
     </div>
 
-    <div class="upload-file">
-      <form action="Upload" method="post" enctype="multipart/form-data">
-        Upload file: <input type="file" class="form-control-file" name="file"/> <br />
-        <input type="submit" name="upload" value="Upload" />
-      </form>
-    </div>
 
-    Upload | Create Folder
+
+    <a href="#/upload">Upload</a> | Create Folder
 
     <hr/>
 
@@ -23,6 +18,7 @@
             <th>Last Modified</th>
             <th>Uploaded By</th>
             <th>Status</th>
+            <th>Comments</th>
           </tr>
         </thead>
 
@@ -32,6 +28,7 @@
             <td>{{file.lastModified}}</td>
             <td>{{file.uploadedBy}}</td>
             <td>{{file.status}}</td>
+            <td>{{file.comments}}
           </tr>
 
 
