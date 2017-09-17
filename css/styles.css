@@ -36,17 +36,14 @@ th{
   margin: 0;
 }*/
 
-why{
-  margin: 0;
-  padding: 50px;
-  float: none;
-}
-
-
 .dropzone{
   text-align: center;
-
 }
+
+textarea {
+  resize: vertical;
+}
+
 /*
 thead{
   background: #000410;
