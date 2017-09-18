@@ -13,8 +13,8 @@ const webdevapp = angular.module('webdevapp', ['ngRoute', 'thatisuday.dropzone']
           .when('/departments', {
                 templateUrl:"/views/departments.html"
           })
-          .when('/departments/arts-and-letters', {
-                templateUrl:"/views/departments/arts-letters.html"
+          .when('/departments/arts-and-letters/art', {
+                templateUrl:"/views/departments/art.html"
           })
           .when('/calendar', {
                 templateUrl:"/views/calendar.html"
@@ -27,10 +27,10 @@ const webdevapp = angular.module('webdevapp', ['ngRoute', 'thatisuday.dropzone']
   .config(function(dropzoneOpsProvider){
     dropzoneOpsProvider.setOptions({
       url : '#/upload',
-      acceptedFiles : 'application/pdf, application/msword, application/vnd.ms-excel,' +
-        ' application/vnd.openxmlformats-officedocument.wordprocessingml.document,' +
-        ' application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-
+      /* must ask liaisons if there should be a restriction on file types */
+      // acceptedFiles : 'application/pdf, application/msword, application/vnd.ms-excel,' +
+      //   ' application/vnd.openxmlformats-officedocument.wordprocessingml.document,' +
+      //   ' application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
       addRemoveLinks : true,
       dictDefaultMessage : 'Click to add or drop a file',
       dictRemoveFile : 'Remove file',
