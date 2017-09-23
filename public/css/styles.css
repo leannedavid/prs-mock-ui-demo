@@ -3,9 +3,27 @@
     padding-left: 15px;
 }
 
+.col-sm-6{
+  padding: 8px;
+}
+
+.dropzone{
+  text-align: center;
+}
+
+.form-check-input{
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+}
+
 h2, h3, h4{
   color: #003237;
   padding-left: 8px;
+}
+
+.img-circle{
+  padding-right: 1px;
 }
 
 .search-filter{
@@ -13,39 +31,23 @@ h2, h3, h4{
   float:right;
 }
 
-.upload-file{
-  padding: 10px;
-}
-
-.table-responsive{
-  padding:50px;
-}
-
-th{
-  text-align: center;
-
-}
-
-.col-sm-6{
-  padding: 8px;
-}
-
-/*.navbar-brand{
+table-responsive{
   padding: 50px;
-  float: none;
-  margin: 0;
-}*/
-
-.dropzone{
-  text-align: center;
 }
 
 textarea {
   resize: vertical;
 }
 
-/*
-thead{
-  background: #000410;
-  color: #FFFFFF;
-}*/
+th{
+  /*vertical-align: middle;*/
+  text-align: center;
+}
+
+.upload-file{
+  padding: 10px;
+}
+
+.user-space{
+  margin-top: -6px;
+}

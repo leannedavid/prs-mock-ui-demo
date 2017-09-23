@@ -1,0 +1,68 @@
+<div class="container" ng-controller="MyWebDevController">
+  <div class="search-filter">
+    <input type="text" placeholder=" Search for a document" size="50">
+    <button type="button" class="btn btn-primary btn-sm">Search</button>
+  </div>
+
+  <div class="toc-navi">
+    <!-- Current path: {{currentPath}}<br/>
+    So far: {{pathList}}<br/><br/> -->
+    Home > Departments > College of Arts and Letters > Art <br/>
+    <!-- <span ng-repeat="path in pathList">
+      <a href="#/{{path}}/">{{path}}</a> >
+    </span> -->
+  </div>
+
+  <hr/>
+
+  <a href="#/upload">Upload</a> | Create Folder <br/><br/>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr class="info">
+          <th><input type="checkbox" ng-model="selectAll" ng-click="checkAll()" class="form-check-input"></th>
+          <th><a href="" ng-click="sortType = 'fileName'; sortReverse = !sortReverse">
+            File Name
+            <span ng-show="sortType == 'fileName' && !sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+            <span ng-show="sortType == 'fileName' && sortReverse"  class="glyphicon glyphicon-triangle-bottom"></span>
+          </a></th>
+
+          <th><a href="" ng-click="sortType = 'lastModified'; sortReverse = !sortReverse">
+            Last Modified
+            <span ng-show="sortType == 'lastModified' && !sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+            <span ng-show="sortType == 'lastModified' && sortReverse"  class="glyphicon glyphicon-triangle-bottom"></span>
+          </a></th>
+
+          <th><a href="" ng-click="sortType = 'uploadedBy'; sortReverse = !sortReverse">
+            Uploaded By
+            <span ng-show="sortType == 'uploadedBy' && !sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+            <span ng-show="sortType == 'uploadedBy' && sortReverse"  class="glyphicon glyphicon-triangle-bottom"></span>
+          </a></th>
+
+          <th><a href="" ng-click="sortType = 'status'; sortReverse = !sortReverse">
+            Status
+            <span ng-show="sortType == 'status' && !sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+            <span ng-show="sortType == 'status' && sortReverse"  class="glyphicon glyphicon-triangle-bottom"></span>
+          </a></th>
+
+          <th><a href="" ng-click="sortType = 'comments'; sortReverse = !sortReverse">
+            Comments
+            <span ng-show="sortType == 'comments' && !sortReverse" class="glyphicon glyphicon-triangle-top"></span>
+            <span ng-show="sortType == 'comments' &&  sortReverse" class="glyphicon glyphicon-triangle-bottom"></span>
+          </a></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="file in fileList | orderBy:sortType:sortReverse">
+          <td><input type="checkbox" ng-model="file.select" class="form-check-input"></td>
+          <td><a target="_self" href="{{file.filePath}}" download="test.jpg">{{file.fileName}}</a></td>
+          <td>{{file.lastModified}}</td>
+          <td>{{file.uploadedBy}}</td>
+          <td>{{file.status}}</td>
+          <td>{{file.comments}}
+        </tr>
+    </table>
+  </div>
+</div>
