@@ -4,8 +4,9 @@
   "description": "Document review system demo",
   "dependencies": {
     "express": "^4.15.4",
-    "socket.io": "^2.0.3",
     "lite": "^4.0.5",
-    "ngdropzone": "^2.0.2"
+    "lite-server": "^2.3.0",
+    "ngdropzone": "^2.0.2",
+    "socket.io": "^2.0.3"
   }
 }

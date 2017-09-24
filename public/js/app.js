@@ -19,6 +19,12 @@ const webdevapp = angular.module('webdevapp', ['ngRoute', 'thatisuday.dropzone']
           .when('/calendar', {
                 templateUrl:"/views/calendar.html"
           })
+          .when('/document-template', {
+                templateUrl:"/views/document-template.html"
+          })
+          .when('/user', {
+                templateUrl:"/views/user.html"
+          })
           .when('/upload', {
                 templateUrl:"/views/upload.html"
           })
