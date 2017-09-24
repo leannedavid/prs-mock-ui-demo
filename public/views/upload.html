@@ -4,30 +4,34 @@
       <div class="dropzone" options="dzOptions" file="file" file-name="fileName" callbacks="dzCallbacks" ng-dropzone></div> <br/>
     </div>
 
-    File name is: {{fileName}} <br/><br/>
-
     <form class="form-group" ng-submit="fileUpload(newFile)">
       <div class="form-group">
         <label>Title: </label>
-        <input type="text" ng-model="newFile.fileName" class="form-control" size="50" placeholder="Name of document"/>
+        <input type="text" ng-model="newFile.fileName" value="{{nameOfFile}}" class="form-control" size="50" placeholder="{{nameOfFile}}" disabled/>
       </div>
+
+      <!-- File name is: {{newFile.fileName}} <br/><br/> -->
 
       <div class="form-group">
         <label>Status: </label>
-        <select class="form-control">
+        <select ng-model="newFile.status" class="form-control">
           <option>New</option>
           <option>Pending</option>
-          <option>In Progress</optionn>
+          <option>In Progress</option>
           <option>Needs Approval</option>
           <option>On Hold</option>
           <option>Approved</option>
         </select>
       </div>
 
+      <!-- Status chosen is: {{newFile.status}} <br/><br/> -->
+
       <div class="form-group">
         <label>Comments:</label>
-        <textarea class="form-control" ng-model="newFile.comments" rows="5" placeholder="Include any comments needed"></textarea>
+        <textarea class="form-control" ng-model="newFile.comments" rows="5" placeholder=""="Include any comments needed"></textarea>
       </div>
+
+      <!-- Comments value: {{newFile.comments}} -->
 
       <div class="form-group">
         <label>E-mail Notification:</label>
@@ -35,7 +39,10 @@
         <input type="radio" name="optradio"> No</input>
       <div>
 
-      <button type="submit" class="btn btn-primary" id="uploadButton" name="upload" value="Upload">Upload</button>
+      <button type="submit" class="btn btn-sm btn-primary" id="uploadButton" name="upload" value="Upload">Upload</button>
     </form>
+
+    <br/><br/>Current Table of Files: <pre>{{fileList | json}}</pre>
+
   </div>
 </div>

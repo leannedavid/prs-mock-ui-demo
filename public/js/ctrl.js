@@ -1,4 +1,4 @@
-webdevapp.controller('MyWebDevController', function($scope, $location){
+webdevapp.controller('MyWebDevController', ['$scope', '$location', function($scope, $location){
   $scope.sortType = 'fileName';
   $scope.sortReverse = false;
 
@@ -10,7 +10,7 @@ webdevapp.controller('MyWebDevController', function($scope, $location){
       'fileName': 'B - Image1.jpg',
       'filePath': '/files/test-image1.jpg',
       'lastModified': 'Forever Ago',
-      'uploadedBy': 'Me',
+      'uploadedBy': 'Andrew McLees',
       'status': 'Pending',
       'comments': 'Initial upload here'
     },
@@ -19,7 +19,7 @@ webdevapp.controller('MyWebDevController', function($scope, $location){
       'fileName': 'P - Image2.jpg',
       'filePath': '/files/test-image2.jpg',
       'lastModified': 'Yesterday',
-      'uploadedBy': 'Not Me',
+      'uploadedBy': 'Leanne David',
       'status': 'On Hold',
       'comments': 'Added something to it'
     },
@@ -28,7 +28,7 @@ webdevapp.controller('MyWebDevController', function($scope, $location){
       'fileName': 'O - Excel.xlsx',
       'filePath': '/files/test-excel1.xlsx',
       'lastModified': 'Some time ago',
-      'uploadedBy': 'Welp',
+      'uploadedBy': 'Justin Sarenas',
       'status': 'Needs Approval',
       'comments': 'Trying to test'
     },
@@ -37,19 +37,32 @@ webdevapp.controller('MyWebDevController', function($scope, $location){
       'fileName': 'A - File.docx',
       'filePath': '/files/test-word1.docx',
       'lastModified': 'Now',
-      'uploadedBy': 'Main Admin',
+      'uploadedBy': 'Ben Solis',
       'status': 'Approved',
-      'comments': 'Document has been approved.'
+      'comments': 'Document has been approved'
     }
   ]
 
   $scope.dzOptions = {
-    maxFilesize : '10',
-    uploadMultiple: 'no'
+    maxFiles:1,
+    init: function() {
+      this.on('addedfile', function(file) {
+        if (this.files.length > 1) {
+          this.removeFile(this.files[0]);
+        }
+      });
+    }
   }
+
+  $scope.nameOfFile = ''
+  $scope.lastModified = ''
 
   $scope.dzCallbacks = {
     'addedfile' : function(file){
+
+      $scope.nameOfFile = file.name
+      $scope.lastModified = file.lastModifiedDate
+      $scope.emptyFile = false
       console.info('File added.', file);
     }
   }
@@ -59,4 +72,23 @@ webdevapp.controller('MyWebDevController', function($scope, $location){
       file.select = $scope.selectAll
     })
   }
-})
+
+  $scope.fileUpload = function(newFile){
+    this.newFile.fileName = $scope.nameOfFile
+    this.newFile.lastModified = $scope.lastModified
+
+    if(this.newFile.fileName && this.newFile.status){
+      $scope.fileList.push({
+        'fileName': this.newFile.fileName,
+        'filePath': this.newFile.fileName,
+        'lastModified': this.newFile.lastModified,
+        'uploadedBy': 'User',
+        'status': this.newFile.status,
+        'comments': this.newFile.comments
+
+      })
+
+      //$location.path('/departments/arts-and-letters/art')
+    }
+  }
+}])

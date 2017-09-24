@@ -11,6 +11,11 @@
   text-align: center;
 }
 
+.file-buttons{
+  margin-top: -10px;
+
+}
+
 .form-check-input{
   display: block;
   text-align: center;
