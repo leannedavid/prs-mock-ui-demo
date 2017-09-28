@@ -6,8 +6,13 @@
 
     <form class="form-group" ng-submit="fileUpload(newFile)">
       <div class="form-group">
-        <label>Title: </label>
+        <label>Filename: </label>
         <input type="text" ng-model="newFile.fileName" value="{{nameOfFile}}" class="form-control" size="50" placeholder="{{nameOfFile}}" disabled/>
+      </div>
+
+      <div class="form-group">
+        <label>Title:</title>
+        <input type="text" class="form-control" />
       </div>
 
       <!-- File name is: {{newFile.fileName}} <br/><br/> -->
@@ -41,8 +46,5 @@
 
       <button type="submit" class="btn btn-sm btn-primary" id="uploadButton" name="upload" value="Upload">Upload</button>
     </form>
-
-    <br/><br/>Current Table of Files: <pre>{{fileList | json}}</pre>
-
   </div>
 </div>
